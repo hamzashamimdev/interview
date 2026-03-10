@@ -1,0 +1,42 @@
+<p>home works!sasasasasasa</p>
+
+{{user.name}}
+
+<button type="button" (click)="check()">checkccc</button>
+
+<div>
+  <!-- <ng-content></ng-content> -->
+</div>
+asasass
+<!-- <input #myInput type="text"><br /> -->
+{{checkstring}}
+
+sasasasas
+1. Angular LifeCycle when Project serve ?
+Ans 1. jab hum angule me ng serve krtey hain to sabse phele index.html -> main.ts or index.ts ->
+AppComponent means root Component Routes check hotey hain phr un k behalf pe jin routes pe components
+ya module set hotey hain woh load hotey hain.
+
+2. Component LifeCycle Kaisey chalty hai angular me?
+Ans 2. Components ki LifeCycle me sab se phele constructor run hota hai us k baad hooks ki bari aaty
+hai ngOnChanges(agar apney @input Decorator use kia hai tab warna condtructor k baad ngOnInit chalta hai) 
+-> ngOnInit -> ngDoCheck -> ngAfterContentInit -> ngAfterContentChecked -> ngAfterViewInit -> ngAfterViewChecked.
+ngOnDestroy Component k Destroy honey pe run hota hai.
+
+3. trackBy Q use kartey hain iska benefits kia hain data agar large ho to bar bar re-render same data rerender se kaisey bachen sirf nee records enter hon?
+Ans 3. trackby hum data pe use kar saktey hain better performance or large data ko rerender se rokney k liye maan li jiye ap k pass forst api call pe 100
+ka data render hua ab backend pe data barhta ja raha hai 1 by 1 ya ziada bhi ab angular se jab api call hogy to trackby old list ko compare kareyga new
+list se 100 ka data same hai to woh just new data ko render kardega old data ko reuse kareyga. but page refresh ho gaya to new instance create hoga sub
+doabara baneyga start se.
+
+4. Pipes Use kiye hain q use kartey hain kia kartey hain pipes?
+Ans 4. Angular me do types k pipe hotey hain pure vs impure default her pipe ka behaivior pure hota hai iska matlab hai specific usi pipe ki input value
+change pe woh pipe run hoga kisi or pe nahi or pipes ka use hum templates me data transform k liye krtey hain formatting/translation/filteration etc.
+impure pipe me hum pipe create krtey hain or usey false declare kartey hain phr woh her change detection pe chalta hai bu tye sahi approach nahi hai
+heavy ho jaty hai site or unneccessary rerendering hoty hai.
+
+5. Better performance rules?
+Ans 5. Avoid Nested Subscription user signals use trackby and async pipe use unsubscription when component Destroy use stand alone 14+ version.
+heavy login html template me nahi likho.images optimize ho css minified ho builld --configuration k saath banao ng buils --configuration production.
+
+6. 
