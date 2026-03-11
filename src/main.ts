@@ -7,3 +7,5 @@ bootstrapApplication(AppComponent, appConfig)
   .catch((err) =>
     // console.error(err);
   console.log("2️⃣ AppModule bootstrapped"));
+
+  
